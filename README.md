@@ -30,72 +30,32 @@ This project consists of five different scripts to handle race-based grouping, D
 
 | File Name              | Description |
 |------------------------|-------------|
-| feature_extraction.ipynb           | Groups the sample data by White race |
-| model_classification.ipynb      | Performs preprocessing and selects outlier genes using baseMean, padj, and log2FoldChange |
+| feature_extraction.ipynb      | Radiomics feature extraction and feature selection    |
+| model_classification.ipynb    | Performs model classification with csv radiomics data |
 
 ---
 
 ## 5. Usage Instructions
 
 1. *Load Datasets:*  
-   
+   for feature extraction
+     Image -> [https://www.kaggle.com/datasets/friedrich19/nifti-renal-cancer-clear-cell](https://www.kaggle.com/datasets/friedrich19/nifti-renal-cancer-clear-cell)
+     Metadata -> [https://www.kaggle.com/datasets/friedrich19/metadata](https://www.kaggle.com/datasets/friedrich19/metadata)
 
-2. *Separate by Race:*  
-   Use Race.ipynb to filter and separate samples by race (e.g., White).
+2. *Feature Extraction:*  
+   Use feature_extraction.ipynb and use Image and Metadata to extract radiomics feature and perform feature selection.
 
-3. *DEG Analysis:*  
-   Use DEGdeseq2.ipynb for preprocessing and identifying outlier genes.
-
-4. *Combine Datasets:*  
-   Use Combine dataset.ipynb to merge DEG results with raw data based on Ensembl_ID.
-
-5. *ROC Analysis:*  
-   Use ROC analysis.ipynb to analyze data139.csv and select significant genes.
-
-6. *Modeling - White Race:*  
-   Load the following CSV files in ResultsWhiteRace.py:
-   - data13.csv
-   - data139.csv
-   - data4.csv
-   - data7.csv
-
-7. *Model Validation - Black Race:*  
-   Load the following CSV files in ResultsBlackRace.py:
-   - Datablack13.csv
-   - Datablack139.csv
-   - Datablack7.csv
-   - Datablack4.csv
+3. *Model Classification:*  
+   Use model_classification.ipynb use the output file from step 2 (Feature Extraction) to start the model classification.
 
 ---
 
-## 6. Requirements
-pip install pandas numpy scikit-learn imbalanced-learn. 
-
-- pandas for load dataset
-
-- Scikit-learn for GaussianNB, LabelEncoder, Traintestsplit, gridsearch, accuracy score and classification report
-
-- imbalanced-learn for using balancing technique
-
-## 7. Methodology for Code Usage
-   1. Use Race.ipynb to filter data by race.
-
-   2. Perform DEG analysis using DEGdeseq2.ipynb.
-
-   3. Use Combine dataset.ipynb to merge DEG results with raw data.
-
-   4. For 139 features, run ROC analysis.ipynb to further filter genes.
-
-   5. Train the model using ResultsWhiteRace.py.
-
-   6. Validate the model using ResultsBlackRace.py.
-
-## 8. Citation
+## 6. Citation
 Not applicable.
 
-## 9. License & Contribution Guidelines
+## 7. License & Contribution Guidelines
 Not applicable.
 
-## 10. Code Repository or DOI
+## 8. Code Repository or DOI
 
 [![DOI]
