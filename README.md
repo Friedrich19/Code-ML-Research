@@ -30,19 +30,15 @@ This project consists of five different scripts to handle race-based grouping, D
 
 | File Name              | Description |
 |------------------------|-------------|
-| Race.ipynb           | Groups the sample data by White race |
-| DEGdeseq2.ipynb      | Performs preprocessing and selects outlier genes using baseMean, padj, and log2FoldChange |
-| ROC analysis.ipynb   | Conducts ROC analysis to identify significant genes |
-| Combine dataset.ipynb| Combines DEG result with raw gene expression data using Ensembl_ID |
-| ResultsWhiteRace.py  | Builds a Gaussian Naive Bayes model for the White race group |
-| ResultsBlackRace.py  | Validates the model using Black race group data |
+| feature_extraction.ipynb           | Groups the sample data by White race |
+| model_classification.ipynb      | Performs preprocessing and selects outlier genes using baseMean, padj, and log2FoldChange |
 
 ---
 
 ## 5. Usage Instructions
 
 1. *Load Datasets:*  
-   Use pandas to load gene expression and phenotype datasets.
+   
 
 2. *Separate by Race:*  
    Use Race.ipynb to filter and separate samples by race (e.g., White).
