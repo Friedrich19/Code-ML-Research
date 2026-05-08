@@ -1,0 +1,16 @@
+numpy
+pandas
+scipy
+scikit-learn
+matplotlib
+seaborn
+SimpleITK
+nibabel
+git+https://github.com/AIM-Harvard/pyradiomics.git
+pymrmr
+deap
+openpyxl
+tqdm
+scikeras
+tensorflow
+xgboost
